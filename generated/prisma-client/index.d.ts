@@ -1072,7 +1072,7 @@ export interface UserCreateWithoutRoomsInput {
   posts?: Maybe<PostCreateManyWithoutUserInput>;
   likes?: Maybe<LikeCreateManyWithoutUserInput>;
   comments?: Maybe<CommentCreateManyWithoutUserInput>;
-  loginSecret: String;
+  loginSecret?: Maybe<String>;
 }
 
 export interface LikeUpdateWithoutUserDataInput {
@@ -1135,7 +1135,7 @@ export interface UserCreateWithoutCommentsInput {
   posts?: Maybe<PostCreateManyWithoutUserInput>;
   likes?: Maybe<LikeCreateManyWithoutUserInput>;
   rooms?: Maybe<RoomCreateManyWithoutParticipantsInput>;
-  loginSecret: String;
+  loginSecret?: Maybe<String>;
 }
 
 export interface RoomCreateWithoutMessagesInput {
@@ -1155,7 +1155,7 @@ export interface UserCreateWithoutFollowersInput {
   likes?: Maybe<LikeCreateManyWithoutUserInput>;
   comments?: Maybe<CommentCreateManyWithoutUserInput>;
   rooms?: Maybe<RoomCreateManyWithoutParticipantsInput>;
-  loginSecret: String;
+  loginSecret?: Maybe<String>;
 }
 
 export interface RoomCreateOneWithoutMessagesInput {
@@ -1213,7 +1213,7 @@ export interface UserCreateWithoutLikesInput {
   posts?: Maybe<PostCreateManyWithoutUserInput>;
   comments?: Maybe<CommentCreateManyWithoutUserInput>;
   rooms?: Maybe<RoomCreateManyWithoutParticipantsInput>;
-  loginSecret: String;
+  loginSecret?: Maybe<String>;
 }
 
 export interface FileUpdateManyMutationInput {
@@ -1232,7 +1232,7 @@ export interface UserCreateWithoutFollowingInput {
   likes?: Maybe<LikeCreateManyWithoutUserInput>;
   comments?: Maybe<CommentCreateManyWithoutUserInput>;
   rooms?: Maybe<RoomCreateManyWithoutParticipantsInput>;
-  loginSecret: String;
+  loginSecret?: Maybe<String>;
 }
 
 export interface PostUpdateOneRequiredWithoutCommentsInput {
@@ -1281,7 +1281,7 @@ export interface UserCreateWithoutPostsInput {
   likes?: Maybe<LikeCreateManyWithoutUserInput>;
   comments?: Maybe<CommentCreateManyWithoutUserInput>;
   rooms?: Maybe<RoomCreateManyWithoutParticipantsInput>;
-  loginSecret: String;
+  loginSecret?: Maybe<String>;
 }
 
 export interface CommentUpsertWithWhereUniqueWithoutUserInput {
@@ -1392,7 +1392,7 @@ export interface UserCreateInput {
   likes?: Maybe<LikeCreateManyWithoutUserInput>;
   comments?: Maybe<CommentCreateManyWithoutUserInput>;
   rooms?: Maybe<RoomCreateManyWithoutParticipantsInput>;
-  loginSecret: String;
+  loginSecret?: Maybe<String>;
 }
 
 export interface RoomUpdateWithWhereUniqueWithoutParticipantsInput {
@@ -2194,7 +2194,7 @@ export interface UserPreviousValues {
   firstName?: String;
   lastName?: String;
   bio?: String;
-  loginSecret: String;
+  loginSecret?: String;
 }
 
 export interface UserPreviousValuesPromise
@@ -2397,7 +2397,7 @@ export interface User {
   firstName?: String;
   lastName?: String;
   bio?: String;
-  loginSecret: String;
+  loginSecret?: String;
 }
 
 export interface UserPromise extends Promise<User>, Fragmentable {
